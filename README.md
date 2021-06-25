@@ -94,3 +94,120 @@ selanjutnya refresh tampilan tersebut:
 ![image](https://user-images.githubusercontent.com/56398506/122626054-75067880-d0d2-11eb-9d59-9e00a0701c6b.png)
 
 
+PRAKTIKUM 12 ( FRAMEWORK - LANJUTAN CRUD)
+
+Konfigurasi koneksi database
+Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Konfigurasi dapat dilakukan dengan du acara, yaitu pada file app/config/database.php
+atau menggunakan file .env. Pada praktikum ini kita gunakan konfigurasi pada file .env.
+
+![image](https://user-images.githubusercontent.com/56473376/122893039-24ac4680-d370-11eb-9497-514f0ea431f3.png)
+
+Membuat Model
+Selanjutnya adalah membuat Model untuk memproses data Artikel. Buat file baru pada direktori app/Models dengan nama ArtikelModel.php
+
+![image](https://user-images.githubusercontent.com/56473376/122893624-b1ef9b00-d370-11eb-8c1a-48f175c18716.png)
+
+Membuat Controller
+Buat Controller baru dengan nama Artikel.php pada direktori app/Controllers.
+
+![image](https://user-images.githubusercontent.com/56473376/122895283-2b3bbd80-d372-11eb-897e-adf7215656ba.png)
+
+Membuat View
+Buat direktori baru dengan nama artikel pada direktori app/views, kemudian buat file baru dengan nama index.php.
+
+![image](https://user-images.githubusercontent.com/56473376/122895658-87064680-d372-11eb-80f2-00cf2559db4f.png)
+
+
+Selanjutnya buka browser kembali, dengan mengakses url http://localhost:8080/artikel
+
+![image](https://user-images.githubusercontent.com/56473376/122896256-1875b880-d373-11eb-8488-71914331c314.png)
+
+Belum ada data yang diampilkan. Kemudian coba tambahkan beberapa data pada database agar dapat ditampilkan datanya.
+![image](https://user-images.githubusercontent.com/56473376/122896636-75716e80-d373-11eb-8749-3334d430b76c.png)
+
+
+Refresh kembali browser, sehingga akan ditampilkan hasilnya.
+
+
+![image](https://user-images.githubusercontent.com/56473376/122896903-bc5f6400-d373-11eb-8a85-cc8cc0a4832b.png)
+
+Membuat Tampilan Detail Artikel
+Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda. Tambahkan fungsi baru pada Controller Artikel dengan nama view().
+
+![image](https://user-images.githubusercontent.com/56398506/123447331-ecbd3180-d603-11eb-996b-16312b916ad3.png)
+
+
+Membuat View Detail
+Buat view baru untuk halaman detail dengan nama app/views/artikel/detail.php.
+
+![image](https://user-images.githubusercontent.com/56473376/122898370-039a2480-d375-11eb-849b-7762594e36f0.png)
+
+Membuat Routing untuk artikel detail
+Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artikel detail.
+
+![image](https://user-images.githubusercontent.com/56473376/122898985-95a22d00-d375-11eb-94f9-460aa5af3c9f.png)
+
+
+Refresh kembali browser, sehingga akan ditampilkan hasilnya.
+
+![image](https://user-images.githubusercontent.com/56473376/122899203-d0a46080-d375-11eb-8a45-2f7cd32c3d77.png)
+
+Membuat Menu Admin
+Menu admin adalah untuk proses CRUD data artikel. Buat method baru pada Controller Artikel dengan nama admin_index().
+
+![image](https://user-images.githubusercontent.com/56398506/123447519-268e3800-d604-11eb-807d-ee03318d5e93.png)
+
+Selanjutnya buat view untuk tampilan admin dengan nama admin_index.php
+
+![image](https://user-images.githubusercontent.com/56398506/123447632-49205100-d604-11eb-90aa-9d612eb9ce59.png)
+
+Tambahkan routing untuk menu admin seperti berikut:
+
+![image](https://user-images.githubusercontent.com/56473376/122900439-e5352880-d376-11eb-901f-31a82c81a19f.png)
+
+Akses menu admin dengan url http://localhost:8080/admin/artikel
+
+
+![image](https://user-images.githubusercontent.com/56473376/122900706-1f062f00-d377-11eb-8b1a-43e2bedd9495.png)
+
+Menambah Data Artikel
+Tambahkan fungsi/method baru pada Controller Artikel dengan nama add().
+
+![image](https://user-images.githubusercontent.com/56398506/123447749-66edb600-d604-11eb-90f0-5db0b487e042.png)
+
+Kemudian buat view untuk form tambah dengan nama form_add.php
+
+![image](https://user-images.githubusercontent.com/56473376/122901669-f03c8880-d377-11eb-9ca8-c18793692f4f.png)
+
+Berikut tampilan form untuk menambah data artikel :
+
+![image](https://user-images.githubusercontent.com/56473376/122901837-1feb9080-d378-11eb-8fda-b98a5492e205.png)
+
+Mengubah Data
+Tambahkan fungsi/method baru pada Controller Artikel dengan nama edit().
+
+![image](https://user-images.githubusercontent.com/56398506/123447878-871d7500-d604-11eb-9d49-439d482b4592.png)
+
+Kemudian buat view untuk form tambah dengan nama form_edit.php
+
+![image](https://user-images.githubusercontent.com/56473376/122902468-a86a3100-d378-11eb-808f-92b0d689c927.png)
+
+kemudian refresh dan lihat hasilnya.
+
+![image](https://user-images.githubusercontent.com/56473376/122902625-d6e80c00-d378-11eb-9521-d27a49bcf09d.png)
+
+Menghapus Data
+Tambahkan fungsi/method baru pada Controller Artikel dengan nama delete().
+
+![image](https://user-images.githubusercontent.com/56398506/123447973-a0bebc80-d604-11eb-8d33-ba6395760153.png)
+
+
+
+
+
+
+
+
+
+
+
