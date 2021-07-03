@@ -1,6 +1,6 @@
 # Lab11Web
 
-Praktikum 11: PHP Framework (Codeigniter)
+# Praktikum 11: PHP Framework (Codeigniter)
 
 Buatlah folder baru dengan nama “lab11_php_ci”
 
@@ -94,7 +94,7 @@ selanjutnya refresh tampilan tersebut:
 ![image](https://user-images.githubusercontent.com/56398506/122626054-75067880-d0d2-11eb-9d59-9e00a0701c6b.png)
 
 
-PRAKTIKUM 12 ( FRAMEWORK - LANJUTAN CRUD)
+# PRAKTIKUM 12 ( FRAMEWORK - LANJUTAN CRUD)
 
 Konfigurasi koneksi database
 Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Konfigurasi dapat dilakukan dengan du acara, yaitu pada file app/config/database.php
@@ -200,6 +200,62 @@ Menghapus Data
 Tambahkan fungsi/method baru pada Controller Artikel dengan nama delete().
 
 ![image](https://user-images.githubusercontent.com/56398506/123447973-a0bebc80-d604-11eb-8d33-ba6395760153.png)
+
+# Praktikum 13 Framework Lanjutan (Modul Login)
+
+Membuat tabel user
+
+![image](https://user-images.githubusercontent.com/56398506/124339760-c4709c80-dbda-11eb-91a6-be17ebf21506.png)
+
+Membuat Model User Selanjutnya adalah membuat Model untuk memproses data Login. Buat file baru pada direktori app/Models dengan nama UserModel.php
+
+![image](https://user-images.githubusercontent.com/56398506/124339773-e66a1f00-dbda-11eb-8597-74d308ad30d5.png)
+
+Membuat Controller User Buat Controller baru dengan nama User.php pada direktori app/Controllers. Kemudian tambahkan method index() untuk menampilkan daftar user, dan method login() untuk proses login.
+
+![image](https://user-images.githubusercontent.com/56398506/124339792-03065700-dbdb-11eb-868b-29716d70749f.png)
+
+![image](https://user-images.githubusercontent.com/56398506/124339806-1adddb00-dbdb-11eb-8f0e-6b508932858e.png)
+
+Membuat View Login Buat direktori baru dengan nama user pada direktori app/views, kemudian buat file baru dengan nama login.php.
+
+![image](https://user-images.githubusercontent.com/56398506/124339825-3943d680-dbdb-11eb-86ad-001d6e405cf9.png)
+
+Membuat Database Seeder Database seeder digunakan untuk membuat data dummy. Untuk keperluan ujicoba modul login, kita perlu memasukkan data user dan password kedaalam database. Untuk itu buat database seeder untuk tabel user. Buka CLI, kemudian tulis perintah berikut:
+
+php spark make:seeder UserSeeder
+
+Selanjutnya, buka file UserSeeder.php yang berada di lokasi direktori /app/Database/Seeds/UserSeeder.php kemudian isi dengan kode berikut:
+
+![image](https://user-images.githubusercontent.com/56398506/124340031-82e0f100-dbdc-11eb-901a-3f7883d4e010.png)
+
+Uji Coba Login Selanjutnya buka url http://localhost:8080/user/login seperti berikut:
+
+![image](https://user-images.githubusercontent.com/56398506/124339863-75773700-dbdb-11eb-9197-a0c9b350bdb9.png)
+
+Menambahkan Auth Filter Selanjutnya membuat filer untuk halaman admin. Buat file baru dengan nama Auth.php pada direktori app/Filters.
+
+![image](https://user-images.githubusercontent.com/56398506/124339882-9049ab80-dbdb-11eb-97b3-d74756dd4fe0.png)
+
+Selanjutnya buka file app/Config/Filters.php tambahkan kode berikut:
+
+![image](https://user-images.githubusercontent.com/56398506/124339900-abb4b680-dbdb-11eb-9dd2-262313a45905.png)
+
+Selanjutnya buka file app/Config/Routes.php dan sesuaikan kodenya.
+
+![image](https://user-images.githubusercontent.com/56398506/124339916-c4bd6780-dbdb-11eb-8a5e-bc0409c78eb9.png)
+
+Percobaan Akses Menu Admin Buka url dengan alamat http://localhost:8080/admin/artikel ketika alamat tersebut diakses maka, akan dimuculkan halaman login.
+
+![image](https://user-images.githubusercontent.com/56398506/124339940-e28acc80-dbdb-11eb-8bb0-55634d1af39c.png)
+
+Fungsi Logout Tambahkan method logout pada Controller User seperti berikut:
+
+![image](https://user-images.githubusercontent.com/56398506/124339960-fafae700-dbdb-11eb-8ac3-04035043cf1a.png)
+
+# Tampilan setelah login
+
+![image](https://user-images.githubusercontent.com/56398506/124339977-17971f00-dbdc-11eb-9e48-1c181d5a12d0.png)
 
 
 
